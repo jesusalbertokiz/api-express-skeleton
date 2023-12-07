@@ -5,12 +5,12 @@ import { HelloControllerSayHi } from "./https/controllers/hello-controller-say-h
 import { HelloMySQLRepository } from "./repository/HelloMySQLRepository";
 
 const getHelloRepository = (): HelloRepository => {
-  switch (config.databaseHello) {
-    case "mySQL":
-      return new HelloMySQLRepository();
-    default:
-      throw new Error("Invalid Database type");
-  }
+	switch (config.databaseHello) {
+		case "mySQL":
+			return new HelloMySQLRepository();
+		default:
+			throw new Error("Invalid Database type");
+	}
 };
 
 const helloRepository = getHelloRepository();

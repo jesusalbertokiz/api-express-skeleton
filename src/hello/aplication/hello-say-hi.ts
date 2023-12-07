@@ -3,15 +3,15 @@ import { HelloFail } from "../domain/hello-fail";
 import { HelloRepository } from "../domain/hello-repository";
 
 export class HelloSayHi {
-  constructor(private readonly helloRepository: HelloRepository) {}
+	constructor(private readonly helloRepository: HelloRepository) {}
 
-  async run(name: string): Promise<Hello> {
-    const hello = await this.helloRepository.sayHi(name);
+	async run(name: string): Promise<Hello> {
+		const hello = await this.helloRepository.sayHi(name);
 
-    if (!hello) {
-      throw new HelloFail();
-    }
+		if (!hello) {
+			throw new HelloFail();
+		}
 
-    return hello;
-  }
+		return hello;
+	}
 }

@@ -1,3 +1,3 @@
 export class Hello {
-  constructor(public readonly name: string) {}
+	constructor(public readonly name: string) {}
 }
